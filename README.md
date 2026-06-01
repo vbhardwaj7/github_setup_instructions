@@ -50,3 +50,14 @@ Run this to confirm setup:
 ssh -T git@github.com -o StrictHostKeyChecking=accept-new
 ```
 You should see: *"Hi [username]! You've successfully authenticated..."*
+
+---
+
+### 6. Creating and Pushing a Repository
+Standard Git commands cannot create a remote repository on GitHub. You must create the repository first:
+
+*   **Via Web Browser:** Go to [github.com/new](https://github.com/new).
+*   **Via GitHub CLI (`gh`):**
+    ```powershell
+    gh repo create <repository-name> --public --source=. --push
+    ```
